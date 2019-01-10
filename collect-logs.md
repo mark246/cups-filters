@@ -72,3 +72,49 @@ in response, and the tool runs successfully.
 This time, the response is a reasonable size (4K)
 
 And there _is_ what looks like reasonable MediaType information in the generated PPD.
+
+## Attempt 3
+
+Per Till's comment https://github.com/OpenPrinting/cups-filters/pull/86#issuecomment-451981384
+tried requesting both "all" and "media-col-database"
+
+### driverless.c excerpt:
+
+   static const char * const pattrs[] =
+  {
+    "all",
+    "media-col-database"
+  };
+  ...
+  ippAddStrings(request, IPP_TAG_OPERATION, IPP_TAG_KEYWORD,
+		"requested-attributes", sizeof(pattrs) / sizeof(pattrs[0]),
+		NULL, pattrs);
+
+### Results
+
+- [capture](./collect-logs/attempt-3/capture.json)
+- [output](./collect-logs/attempt-3/output.txt)
+
+This time weget this error:
+
+> ERROR: Unable to create PPD file: Printer does not support required IPP attributes or document formats.
+
+The response does NOT contain a "urf-supported" field.
+
+But (like with attempt 1) it is huge, and contains the crazy "media-col-database".
+
+Unlike 1 though, it _doesn't_ have the "printer-attributes-tag" section.
+Aside from pthe URF information, this also means we don't get the fields:
+- printer-is-accepting-jobs
+- printer-state
+- queued-job-count
+- ... and several others.
+
+(whereas these fields were all present in attempt 2).
+ 
+ After power-cycling the printer and repeating the test, the capture
+ looks similar, so this does not "fix" the corrupt media-col-database.
+ 
+ 
+
+
