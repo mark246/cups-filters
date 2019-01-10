@@ -1,0 +1,135 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "1.20.2"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*FileSystem: False
+*PCFileName: "drvless.ppd"
+*Manufacturer: "Canon"
+*ModelName: "Canon MG4200 series"
+*Product: "(Canon MG4200 series)"
+*NickName: "Canon MG4200 series, driverless, cups-filters 1.20.2"
+*ShortNickName: "Canon MG4200 series"
+*ColorDevice: True
+*cupsVersion: 2.2
+*cupsSNMPSupplies: False
+*cupsLanguages: "en"
+*APSupplies: "http://004417000000.local."
+*cupsFilter2: "image/urf image/urf 100 -"
+*cupsFilter2: "image/jpeg image/jpeg 0 -"
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: 4x6
+*PageSize 3.5x5/3.5 x 5": "<</PageSize[252 360]>>setpagedevice"
+*PageSize 4x6/4 x 6": "<</PageSize[288 432]>>setpagedevice"
+*PageSize 5x7/5 x 7": "<</PageSize[360 504]>>setpagedevice"
+*PageSize 8x10/8 x 10": "<</PageSize[576 720]>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595.275590551181 841.889763779528]>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[419.527559055118 595.275590551181]>>setpagedevice"
+*PageSize B5/JIS B5: "<</PageSize[515.905511811024 728.503937007874]>>setpagedevice"
+*PageSize DoublePostcardRotated/Oufuku Reply Postcard: "<</PageSize[419.527559055118 566.929133858268]>>setpagedevice"
+*PageSize Env10/#10 Envelope: "<</PageSize[296.985826771654 684]>>setpagedevice"
+*PageSize EnvDL/DL Envelope: "<</PageSize[311.811023622047 623.622047244094]>>setpagedevice"
+*PageSize Legal/US Legal: "<</PageSize[612 1008]>>setpagedevice"
+*PageSize Letter/US Letter: "<</PageSize[612 792]>>setpagedevice"
+*PageSize Postcard/Hagaki: "<</PageSize[283.464566929134 419.527559055118]>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: 4x6
+*PageRegion 3.5x5/3.5 x 5": "<</PageSize[252 360]>>setpagedevice"
+*PageRegion 4x6/4 x 6": "<</PageSize[288 432]>>setpagedevice"
+*PageRegion 5x7/5 x 7": "<</PageSize[360 504]>>setpagedevice"
+*PageRegion 8x10/8 x 10": "<</PageSize[576 720]>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595.275590551181 841.889763779528]>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[419.527559055118 595.275590551181]>>setpagedevice"
+*PageRegion B5/JIS B5: "<</PageSize[515.905511811024 728.503937007874]>>setpagedevice"
+*PageRegion DoublePostcardRotated/Oufuku Reply Postcard: "<</PageSize[419.527559055118 566.929133858268]>>setpagedevice"
+*PageRegion Env10/#10 Envelope: "<</PageSize[296.985826771654 684]>>setpagedevice"
+*PageRegion EnvDL/DL Envelope: "<</PageSize[311.811023622047 623.622047244094]>>setpagedevice"
+*PageRegion Legal/US Legal: "<</PageSize[612 1008]>>setpagedevice"
+*PageRegion Letter/US Letter: "<</PageSize[612 792]>>setpagedevice"
+*PageRegion Postcard/Hagaki: "<</PageSize[283.464566929134 419.527559055118]>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: 4x6
+*DefaultPaperDimension: 4x6
+*ImageableArea 3.5x5: "18.141732283465 106.015748031496 233.858267716535 337.322834645669"
+*PaperDimension 3.5x5: "252 360"
+*ImageableArea 4x6: "18.141732283465 106.015748031496 269.858267716535 409.322834645669"
+*PaperDimension 4x6: "288 432"
+*ImageableArea 5x7: "18.141732283465 106.015748031496 341.858267716535 481.322834645669"
+*PaperDimension 5x7: "360 504"
+*ImageableArea 8x10: "18.141732283465 106.015748031496 557.858267716535 697.322834645669"
+*PaperDimension 8x10: "576 720"
+*ImageableArea A4: "18.141732283465 106.015748031496 577.133858267717 819.212598425197"
+*PaperDimension A4: "595.275590551181 841.889763779528"
+*ImageableArea A5: "18.141732283465 106.015748031496 401.385826771654 572.59842519685"
+*PaperDimension A5: "419.527559055118 595.275590551181"
+*ImageableArea B5: "18.141732283465 106.015748031496 497.763779527559 705.826771653543"
+*PaperDimension B5: "515.905511811024 728.503937007874"
+*ImageableArea DoublePostcardRotated: "18.141732283465 106.015748031496 401.385826771654 544.251968503937"
+*PaperDimension DoublePostcardRotated: "419.527559055118 566.929133858268"
+*ImageableArea Env10: "18.141732283465 106.015748031496 278.844094488189 661.322834645669"
+*PaperDimension Env10: "296.985826771654 684"
+*ImageableArea EnvDL: "18.141732283465 106.015748031496 293.669291338583 600.944881889764"
+*PaperDimension EnvDL: "311.811023622047 623.622047244094"
+*ImageableArea Legal: "18.141732283465 106.015748031496 593.858267716535 985.322834645669"
+*PaperDimension Legal: "612 1008"
+*ImageableArea Letter: "18.141732283465 106.015748031496 593.858267716535 769.322834645669"
+*PaperDimension Letter: "612 792"
+*ImageableArea Postcard: "18.141732283465 106.015748031496 265.322834645669 396.850393700787"
+*PaperDimension Postcard: "283.464566929134 419.527559055118"
+*HWMargins: "18.141732283465 106.015748031496 18.141732283465 22.677165354331"
+*ParamCustomPageSize Width: 1 points 252.283464566929 609.448818897638
+*ParamCustomPageSize Height: 2 points 360 1916.220472440945
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 3
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*OpenUI *InputSlot/Media Source: PickOne
+*OrderDependency: 10 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Main/Main: "<</MediaPosition 1>>setpagedevice"
+*InputSlot Auto/Automatic: "<</MediaPosition 0>>setpagedevice"
+*CloseUI: *InputSlot
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 10 AnySetup *MediaType
+*DefaultMediaType: Photographic
+*MediaType Stationery/Stationery: "<</MediaType(Stationery)>>setpagedevice"
+*MediaType Photographic/Photo Paper: "<</MediaType(Photographic)>>setpagedevice"
+*MediaType CustomMediaTypePhotoPaperPlusGlossyIi: "<</MediaType(CustomMediaTypePhotoPaperPlusGlossyIi)>>setpagedevice"
+*MediaType CustomMediaTypePhotoPaperProPlatinum: "<</MediaType(CustomMediaTypePhotoPaperProPlatinum)>>setpagedevice"
+*MediaType CustomMediaTypeMattePhotoPaper: "<</MediaType(CustomMediaTypeMattePhotoPaper)>>setpagedevice"
+*MediaType CustomMediaTypeGlossyPhotoPaper: "<</MediaType(CustomMediaTypeGlossyPhotoPaper)>>setpagedevice"
+*MediaType CustomMediaTypeHighResolutionPaper: "<</MediaType(CustomMediaTypeHighResolutionPaper)>>setpagedevice"
+*MediaType CustomMediaTypeInkJetHagaki: "<</MediaType(CustomMediaTypeInkJetHagaki)>>setpagedevice"
+*MediaType CustomMediaTypeHagakiK: "<</MediaType(CustomMediaTypeHagakiK)>>setpagedevice"
+*MediaType CustomMediaTypeHagaki: "<</MediaType(CustomMediaTypeHagaki)>>setpagedevice"
+*MediaType Envelope/Envelope: "<</MediaType(Envelope)>>setpagedevice"
+*MediaType CustomMediaTypeOtherPhotoPaper: "<</MediaType(CustomMediaTypeOtherPhotoPaper)>>setpagedevice"
+*MediaType CustomMediaTypePhotoPaperPlusSemiGloss: "<</MediaType(CustomMediaTypePhotoPaperPlusSemiGloss)>>setpagedevice"
+*MediaType CustomMediaTypePhotoPaperProLuster: "<</MediaType(CustomMediaTypePhotoPaperProLuster)>>setpagedevice"
+*CloseUI: *MediaType
+*OpenUI *ColorModel/Print Color Mode: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*ColorModel RGB/Color: "<</cupsColorSpace 19/cupsBitsPerColor 8/cupsColorOrder 0/cupsCompression 0>>setpagedevice"
+*ColorModel Gray/Monochrome: "<</cupsColorSpace 18/cupsBitsPerColor 8/cupsColorOrder 0/cupsCompression 0>>setpagedevice"
+*DefaultColorModel: RGB
+*CloseUI: *ColorModel
+*OpenUI *Duplex/2-Sided Printing: PickOne
+*OrderDependency: 10 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/Off: "<</Duplex false>>setpagedevice"
+*Duplex DuplexNoTumble/On (Portrait): "<</Duplex true/Tumble false>>setpagedevice"
+*Duplex DuplexTumble/On (Landscape): "<</Duplex true/Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+*cupsBackSide: Rotated
+*DefaultResolution: 600dpi
+*OpenUI *cupsPrintQuality/Print Quality: PickOne
+*OrderDependency: 10 AnySetup *cupsPrintQuality
+*DefaultcupsPrintQuality: 4
+*cupsPrintQuality 4/Normal: "<</HWResolution[600 600]>>setpagedevice"
+*cupsPrintQuality 5/High: "<</HWResolution[600 600]>>setpagedevice"
+*CloseUI: *cupsPrintQuality

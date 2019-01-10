@@ -477,15 +477,6 @@ generate_ppd (const char *uri)
   ipp_attribute_t *attr;
   char buffer[65536], ppdname[1024];
   int i, fd, bytes;
-  static const char * const pattrs[] =
-  {
-    "job-template",
-    "printer-defaults",
-    "printer-description",
-    "media-col-database",
-    "urf-supported"
-  };
-
   /* Request printer properties via IPP to generate a PPD file for the
      printer (mainly IPP Everywhere printers)
      If we work with Systen V interface scripts use this info to set
@@ -509,9 +500,8 @@ generate_ppd (const char *uri)
   request = ippNewRequest(IPP_OP_GET_PRINTER_ATTRIBUTES);
   ippAddString(request, IPP_TAG_OPERATION, IPP_TAG_URI, "printer-uri",
 	       NULL, uri);
-  ippAddStrings(request, IPP_TAG_OPERATION, IPP_TAG_KEYWORD,
-		"requested-attributes", sizeof(pattrs) / sizeof(pattrs[0]),
-		NULL, pattrs);
+  ippAddString(request, IPP_TAG_OPERATION, IPP_TAG_KEYWORD,
+		"requested-attributes", NULL, "all");
   response = cupsDoRequest(http, request, resource);
 
   /* Log all printer attributes for debugging */

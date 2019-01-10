@@ -39,4 +39,36 @@ We see:
 
     "urf-supported (1setOf keyword): 'CP1','PQ4-5','RS600','SRGB24','W8','DM3','OB9','OFU0'"
 
-in response, the tool runs successfully.
+in the response, and the tool runs successfully.
+
+But the media-col-database (1setOf collection) in the response is truncated, and contains
+the same `collection {media-size{x-dimension,y-dimension}, ...` data block repeated over-and-over.
+
+This is not just an artifact of the packet decoding - the reassembled TCP packet is huge (>50K)
+
+There is no MediaType information in the generated PPD.
+
+## Attempt 2
+
+Per Till's comment https://github.com/OpenPrinting/cups-filters/pull/86#issuecomment-451961699
+tried a single element with "all"
+
+### driverless.c excerpt:
+
+  ippAddString(request, IPP_TAG_OPERATION, IPP_TAG_KEYWORD,
+		"requested-attributes", NULL, "all");
+
+### Results
+
+- [capture](./collect-logs/attempt-2/capture.json)
+- [output](./collect-logs/attempt-2/output.txt)
+
+We see:
+
+    "urf-supported (1setOf keyword): 'CP1','PQ4-5','RS600','SRGB24','W8','DM3','OB9','OFU0'"
+
+in response, and the tool runs successfully.
+
+This time, the response is a reasonable size (4K)
+
+And there _is_ what looks like reasonable MediaType information in the generated PPD.
